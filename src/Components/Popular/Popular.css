@@ -1,23 +1,69 @@
-.popular{
+/* Base Styles for Popular Section */
+.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    height: 90vh; /* Set height for desktop */
+    padding: 20px; /* Add padding for spacing */
+    margin-bottom: 100px; /* Add margin for spacing from other sections */
 }
-.popular h1{
-    columns: #171717;
+
+.popular h1 {
+    color: #171717; /* Fix typo: 'columns' to 'color' */
     font-size: 50px;
     font-weight: 600;
+    text-align: center; /* Center align text */
 }
-.popular hr{
+
+.popular hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
-.popular-item{
+
+.popular-item {
     margin-top: 50px;
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Gap between items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items */
+}
+
+/* Responsive Design */
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .popular {
+        height: auto; /* Adjust height for tablets */
+        padding: 10px 20px; /* Smaller padding */
+    }
+    .popular h1 {
+        font-size: 40px; /* Reduce font size for tablets */
+    }
+    .popular-item {
+        gap: 20px; /* Adjust gap between items */
+        justify-content: space-between; /* Space out items */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .popular {
+        height: auto; /* Adjust height for mobile */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+    .popular h1 {
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+    .popular hr {
+        width: 150px; /* Narrower line for mobile */
+        height: 4px; /* Reduced height */
+    }
+    .popular-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: 20px; /* Adjust gap for better spacing */
+        margin-top: 30px; /* Reduce top margin */
+    }
 }

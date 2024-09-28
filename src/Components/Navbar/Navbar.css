@@ -1,32 +1,47 @@
-.navbar{
+/* Base Styles for Navigation */
+.navbar {
     padding: 16px;
-    box-shadow: 0 1px 3px -2px black ;
+    box-shadow: 0 1px 3px -2px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures wrapping of items */
 }
-.nav-logo{
+.nav-logo {
     font-weight: 600;
 }
-.nav-logo p{
+.nav-logo p {
     font-size: 38px;
     font-weight: 600;
 }
-.nav-logo img{
+.nav-logo img {
     height: 110px;
     width: 150px;
 }
-.nav-menu{
+.nav-menu {
     font-size: 20px;
     font-weight: 500;
     color: #626262;
+    display: flex;
+    gap: 15px;
 }
-/*  */
-.nav-menu hr{
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5px;
+}
+/* For Navigation Links */
+.nav-menu hr {
     background: #ff4141;
     border: none;
     width: 80%;
     height: 4px;
     border-radius: 10px;
 }
-button{
+button {
     height: 58px;
     width: 157px;
     border: 1px solid #7a7a7a;
@@ -37,10 +52,10 @@ button{
     background: white;
     cursor: pointer;
 }
-button:active{
+button:active {
     background: #f3f3f3;
 }
-.nav-cart-count{
+.nav-cart-count {
     width: 22px;
     height: 22px;
     margin-top: -35px;
@@ -49,11 +64,48 @@ button:active{
     font-size: 14px;
     background: red;
 }
-li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    gap: 5px;
+
+/* Responsive Design */
+/* Tablets and below */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks elements vertically */
+        align-items: flex-start;
+    }
+    .nav-logo {
+        margin-bottom: 10px; /* Adds space between logo and menu */
+    }
+    .nav-menu {
+        flex-direction: column; /* Stacks menu items vertically */
+        align-items: flex-start;
+        width: 100%; /* Full width for menu */
+    }
+    .nav-menu li {
+        align-items: flex-start; /* Aligns items to the left */
+    }
+    button {
+        width: 100%; /* Full width for button */
+        margin-top: 10px; /* Space above button */
+    }
+    .nav-cart-count {
+        margin-left: 0; /* Adjusts position for badge */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .nav-logo p {
+        font-size: 24px; /* Smaller font size for logo */
+    }
+    .nav-logo img {
+        height: 80px; /* Smaller logo image */
+        width: 110px;
+    }
+    .nav-menu {
+        font-size: 18px; /* Smaller font size for menu items */
+    }
+    button {
+        height: 48px;
+        font-size: 18px; /* Smaller button text */
+    }
 }

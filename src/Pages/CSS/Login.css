@@ -1,37 +1,49 @@
+/* Base Styles for Login Section */
 .login {
     width: 100%;
     height: 100vh;
     background: #fce3f3;
-    padding-top: 60px;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px; /* Add padding for smaller screens */
 }
-.login-container{
-    width: 580px;
-    height: 600px;
+
+.login-container {
+    width: 580px; /* Default width for larger screens */
+    height: auto; /* Adjust height based on content */
     background: white;
-    margin: auto;
     padding: 40px 60px;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
-.login-container h1{
+
+.login-container h1 {
     margin: 20px 0px;
     font-size: 50px;
     font-weight: bolder;
+    text-align: center; /* Center align heading */
 }
-.login-fields{
+
+.login-fields {
     display: flex;
     flex-direction: column;
     gap: 29px;
     margin-top: 30px;
 }
-.login-fields input{
+
+.login-fields input {
     height: 60px;
     width: 100%;
     padding-left: 20px;
-    border:  1px solid #c9c9c9;
+    border: 1px solid #c9c9c9;
     outline: none;
     color: #5c5c5c;
     font-size: 18px;
+    border-radius: 5px; /* Add rounded corners to inputs */
 }
-.login-container button{
+
+.login-container button {
     width: 100%;
     height: 72px;
     color: white;
@@ -41,19 +53,29 @@
     font-size: 24px;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 5px; /* Add rounded corners to button */
+    transition: background 0.3s ease; /* Smooth transition on hover */
 }
-.login-login{
+
+.login-container button:hover {
+    background-color: #e03333; /* Darker background on hover */
+}
+
+.login-login {
     margin-top: 20px;
     color: #5c5c5c;
     font-size: 18px;
     font-weight: 500;
+    text-align: center; /* Center align text */
 }
-.login-login span{
-    color:#ff4141 ;
-    font-weight: 600;
 
+.login-login span {
+    color: #ff4141;
+    font-weight: 600;
+    cursor: pointer; /* Change cursor to pointer */
 }
-.login-agree{
+
+.login-agree {
     display: flex;
     align-items: center;
     margin-top: 18px;
@@ -61,4 +83,52 @@
     color: #5c5c5c;
     font-size: 15px;
     font-weight: 500;
+}
+
+/* Responsive Design */
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .login-container {
+        width: 80%; /* Adjust width for tablets */
+        padding: 30px 40px; /* Smaller padding */
+    }
+    .login-container h1 {
+        font-size: 40px; /* Reduce font size for tablets */
+    }
+    .login-fields input {
+        height: 50px; /* Adjust height for inputs */
+        font-size: 16px; /* Adjust font size */
+    }
+    .login-container button {
+        height: 60px; /* Adjust button height */
+        font-size: 22px; /* Adjust button font size */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%; /* Full width for mobile */
+        padding: 20px; /* Reduced padding */
+        margin: 10px; /* Add margin for spacing */
+    }
+    .login-container h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .login-fields input {
+        height: 45px; /* Adjust height for inputs */
+        font-size: 14px; /* Adjust font size */
+    }
+    .login-container button {
+        height: 50px; /* Adjust button height */
+        font-size: 18px; /* Adjust font size */
+    }
+    .login-login {
+        font-size: 16px; /* Adjust font size */
+    }
+    .login-agree {
+        font-size: 14px; /* Adjust font size */
+        flex-direction: column; /* Stack elements vertically */
+        gap: 10px; /* Adjust gap */
+    }
 }

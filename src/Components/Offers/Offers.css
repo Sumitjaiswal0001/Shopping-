@@ -1,30 +1,39 @@
-.offers{
-    width: 65%;
+/* Base Styles for Offers */
+.offers {
+    width: 65%; /* Default width for larger screens */
     height: 60vh;
     display: flex;
+    flex-direction: row; /* Default direction for larger screens */
     margin: auto;
-    padding: 0px 140px;
+    padding: 0px 140px; /* Large padding for desktop */
+    margin-top: 5%;
     margin-bottom: 150px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
-    margin-top: 5%;
+    gap: 30px; /* Added gap for better spacing */
 }
-.offers-left{
+
+.offers-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.offers-left h1{
+
+.offers-left h1 {
     color: #171717;
-    font-size: 80px;
+    font-size: 80px; /* Large font size for desktop */
     font-weight: 600;
+    line-height: 1.1; /* Line height for better readability */
 }
-.offers-left p{
+
+.offers-left p {
     color: #171717;
-    font-size: 22px;
+    font-size: 22px; /* Default font size for paragraph */
     font-weight: 600;
+    margin-top: 10px; /* Added margin for spacing */
 }
-.offers-left button{
+
+.offers-left button {
     width: 282px;
     height: 70px;
     border-radius: 35px;
@@ -35,11 +44,67 @@
     font-weight: 500;
     margin-top: 30px;
     cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition on hover */
 }
-.offers-right{
+
+.offers-left button:hover {
+    background: #e03333; /* Darker background on hover */
+}
+
+.offers-right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-top: 50px;
+}
+
+/* Responsive Design */
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .offers {
+        flex-direction: column; /* Stack content vertically */
+        width: 80%; /* Adjusted width for tablets */
+        padding: 0px 60px; /* Smaller padding */
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .offers-left h1 {
+        font-size: 50px; /* Smaller font size for h1 */
+    }
+    .offers-left p {
+        font-size: 18px; /* Adjusted font size */
+    }
+    .offers-left button {
+        width: 240px; /* Smaller button width */
+        height: 60px; /* Reduced height */
+        font-size: 20px; /* Smaller font size */
+    }
+    .offers-right {
+        justify-content: center; /* Center the right content */
+        padding-top: 30px; /* Adjust top padding */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .offers {
+        width: 90%; /* Full width for mobile devices */
+        padding: 0px 20px; /* Smaller padding */
+        margin-bottom: 100px; /* Reduced bottom margin */
+    }
+    .offers-left h1 {
+        font-size: 36px; /* Smaller font size for mobile */
+    }
+    .offers-left p {
+        font-size: 16px; /* Smaller font size */
+    }
+    .offers-left button {
+        width: 100%; /* Full width button for mobile */
+        height: 50px; /* Adjusted height */
+        font-size: 18px; /* Adjusted font size */
+    }
+    .offers-right {
+        justify-content: center; /* Center the right content */
+        padding-top: 20px; /* Adjust top padding */
+    }
 }
